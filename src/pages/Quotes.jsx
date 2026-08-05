@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 function Quotes() {
   const [quotes, setQuotes] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState();
+  const [error, setError] = useState();
 
   useEffect(() => {
     fetch('https://seussology.info/api/quotes/random/10')

@@ -3,9 +3,9 @@ import { useParams, Link } from 'react-router-dom';
 
 function BookDetails() {
   const { id } = useParams(); // Gets the book ID from the URL parameter (/books/:id)
-  const [book, setBook] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [book, setBook] = useState();
+  const [loading, setLoading] = useState();
+  const [error, setError] = useState();
 
   useEffect(() => {
     fetch(`https://seussology.info/api/books/${id}`)
