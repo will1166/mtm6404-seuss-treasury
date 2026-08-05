@@ -1,3 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+}
+
+/* NAVBAR */
+.site-header, .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: #2C5782;
+    color: #ffffff;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
 .page-title {
   margin-bottom: 20px;
   font-size: 1.5rem;
