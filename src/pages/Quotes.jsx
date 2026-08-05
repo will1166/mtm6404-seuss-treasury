@@ -30,11 +30,16 @@ function Quotes() {
     <div>
       <h2 className="page-title">Random Dr. Seuss Quotes</h2>
       <div className="quotes-list">
-        {quotes.map((quote, index) => (
-          <blockquote key={quote.id || index} className="quote-card">
-            <p className="quote-text">"{quote.quote}"</p>
-            {quote.book && (
-              <cite className="quote-book">— {quote.book.title}</cite>
+        {quotes.map((item) => (
+          <blockquote key={item.id } className="quote-card">
+            {/* Check item.text or item.quote depending on API payload */}
+            <p className="quote-text">"{item.text || item.quote}"</p>
+            
+            {/* Display book title if available */}
+            {item.book && (
+              <cite className="quote-book">
+                — {typeof item.book === 'object' ? item.book.title : item.book}
+              </cite>
             )}
           </blockquote>
         ))}
